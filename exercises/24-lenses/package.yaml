@@ -1,0 +1,24 @@
+name: ex24-lenses
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+  - lens >= 5.2
+
+library:
+  source-dirs: src
+  default-extensions:
+    - TemplateHaskell
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    default-extensions:
+      - TemplateHaskell
+    dependencies:
+      - ex24-lenses
+      - hspec >= 2.11
+      - hspec-discover
+      - lens >= 5.2

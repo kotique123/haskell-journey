@@ -1,0 +1,23 @@
+name: ex18-lazy-evaluation
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+  - deepseq >= 1.4
+
+library:
+  source-dirs: src
+  default-extensions:
+    - BangPatterns
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - ex18-lazy-evaluation
+      - hspec >= 2.11
+      - hspec-discover
+      - QuickCheck
+      - deepseq >= 1.4

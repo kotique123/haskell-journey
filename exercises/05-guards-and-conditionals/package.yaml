@@ -1,0 +1,19 @@
+name: ex05-guards-and-conditionals
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - ex05-guards-and-conditionals
+      - hspec >= 2.11
+      - hspec-discover
+      - QuickCheck

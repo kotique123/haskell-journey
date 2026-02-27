@@ -1,0 +1,19 @@
+name: ex09-algebraic-data-types
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - ex09-algebraic-data-types
+      - hspec >= 2.11
+      - hspec-discover
+      - QuickCheck

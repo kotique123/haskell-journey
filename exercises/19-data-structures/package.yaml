@@ -1,0 +1,21 @@
+name: ex19-data-structures
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+  - containers >= 0.6
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - ex19-data-structures
+      - hspec >= 2.11
+      - hspec-discover
+      - QuickCheck
+      - containers >= 0.6

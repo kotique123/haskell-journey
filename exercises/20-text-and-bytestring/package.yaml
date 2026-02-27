@@ -1,0 +1,27 @@
+name: ex20-text-and-bytestring
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+  - text >= 2.0
+  - bytestring >= 0.11
+
+library:
+  source-dirs: src
+  default-extensions:
+    - OverloadedStrings
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    default-extensions:
+      - OverloadedStrings
+    dependencies:
+      - ex20-text-and-bytestring
+      - hspec >= 2.11
+      - hspec-discover
+      - QuickCheck
+      - text >= 2.0
+      - bytestring >= 0.11

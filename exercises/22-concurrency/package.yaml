@@ -1,0 +1,22 @@
+name: ex22-concurrency
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+  - stm >= 2.5
+  - async >= 2.2
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - ex22-concurrency
+      - hspec >= 2.11
+      - hspec-discover
+      - stm >= 2.5
+      - async >= 2.2

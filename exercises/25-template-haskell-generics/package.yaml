@@ -1,0 +1,26 @@
+name: ex25-template-haskell-generics
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+  - aeson >= 2.1
+
+library:
+  source-dirs: src
+  default-extensions:
+    - DeriveGeneric
+    - DerivingStrategies
+    - GeneralizedNewtypeDeriving
+    - DerivingVia
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - ex25-template-haskell-generics
+      - hspec >= 2.11
+      - hspec-discover
+      - aeson >= 2.1
+      - bytestring >= 0.11

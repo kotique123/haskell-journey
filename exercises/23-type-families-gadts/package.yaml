@@ -1,0 +1,29 @@
+name: ex23-type-families-gadts
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+
+library:
+  source-dirs: src
+  default-extensions:
+    - GADTs
+    - TypeFamilies
+    - DataKinds
+    - KindSignatures
+    - ScopedTypeVariables
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    default-extensions:
+      - GADTs
+      - TypeFamilies
+      - DataKinds
+      - ScopedTypeVariables
+    dependencies:
+      - ex23-type-families-gadts
+      - hspec >= 2.11
+      - hspec-discover

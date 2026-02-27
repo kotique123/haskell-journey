@@ -1,0 +1,22 @@
+name: ex17-monad-transformers
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+  - mtl >= 2.3
+  - transformers >= 0.6
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - ex17-monad-transformers
+      - hspec >= 2.11
+      - hspec-discover
+      - mtl >= 2.3
+      - transformers >= 0.6

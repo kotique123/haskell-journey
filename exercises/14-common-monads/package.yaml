@@ -1,0 +1,19 @@
+name: ex14-common-monads
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - ex14-common-monads
+      - hspec >= 2.11
+      - hspec-discover
+      - QuickCheck

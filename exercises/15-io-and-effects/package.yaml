@@ -1,0 +1,21 @@
+name: ex15-io-and-effects
+version: 0.1.0.0
+dependencies:
+  - base >= 4.17 && < 5
+  - directory
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Exercise
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - ex15-io-and-effects
+      - hspec >= 2.11
+      - hspec-discover
+      - QuickCheck
+      - temporary
