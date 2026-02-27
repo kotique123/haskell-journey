@@ -13,6 +13,7 @@ library:
     - DerivingVia
   exposed-modules:
     - Exercise
+  other-modules: []
 
 tests:
   spec:

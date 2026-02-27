@@ -10,6 +10,7 @@ library:
     - BangPatterns
   exposed-modules:
     - Exercise
+  other-modules: []
 
 tests:
   spec:

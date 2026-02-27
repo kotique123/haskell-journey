@@ -10,6 +10,7 @@ library:
     - TemplateHaskell
   exposed-modules:
     - Exercise
+  other-modules: []
 
 tests:
   spec:

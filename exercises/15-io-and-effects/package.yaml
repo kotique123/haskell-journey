@@ -8,6 +8,7 @@ library:
   source-dirs: src
   exposed-modules:
     - Exercise
+  other-modules: []
 
 tests:
   spec:
