@@ -85,6 +85,29 @@ greetUser :: String -> String
 greetUser name = "Hello, " ++ name ++ "!"
 ```
 
+### Functions with multiple arguments
+
+To accept more than one argument, list them all before the `=`. The type signature separates each argument type with `->`:
+
+```haskell
+add :: Double -> Double -> Double
+add x y = x + y
+
+greetFull :: String -> String -> String
+greetFull firstName lastName = "Hello, " ++ firstName ++ " " ++ lastName ++ "!"
+```
+
+Call a multi-argument function by writing the arguments one after another, separated by spaces — **no commas, no parentheses** (unless grouping is needed):
+
+```haskell
+ghci> add 3.0 4.0
+7.0
+ghci> greetFull "Ada" "Lovelace"
+"Hello, Ada Lovelace!"
+```
+
+`bmi :: Double -> Double -> String` follows this exact pattern: it takes `weight` and `height` as two separate arguments.
+
 ### The `pi` constant
 
 Prelude exports the constant `pi :: Floating a => a` which is a good approximation of π:
@@ -106,6 +129,20 @@ ghci> let w = 70.0; h = 1.75
 ghci> w / (h * h)
 22.857142857142858
 ```
+
+### Conditionals in Haskell (`if ... then ... else ...`)
+
+In Haskell, `if` is an expression, so it must always include both `then` and `else` branches.
+
+```haskell
+label :: Double -> String
+label x =
+  if x < 18.5 then "Underweight"
+  else if x <= 25.0 then "Normal"
+  else "Overweight"
+```
+
+For `bmi`, you can first compute the BMI value and then choose one of the three strings with this same pattern.
 
 ---
 
