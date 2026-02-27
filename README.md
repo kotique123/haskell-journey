@@ -11,13 +11,18 @@ A structured, hands-on Haskell curriculum with 30 progressive exercises. Each ex
 Prerequisites: [Stack](https://docs.haskellstack.org/en/stable/README/)
 
 ```bash
-# Enter an exercise
+# Enter an exercise directory — each exercise is its own isolated Stack project,
+# so all `stack` commands must be run from inside that directory.
 cd exercises/01-hello-haskell
 
-# Run the tests (they will all fail until you implement the stubs)
+# Build the project and run the test suite.
+# On the first run Stack will download GHC and all dependencies (takes a few minutes).
+# Tests will fail with "undefined" errors until you fill in the stubs — that's expected.
 stack test
 
-# Open a REPL for the exercise
+# Open an interactive Haskell REPL (GHCi) pre-loaded with your Exercise module.
+# You can call any function you've defined to try it out, e.g.:  greet "Alice"
+# Exit with :quit or Ctrl-D.
 stack ghci src/Exercise.hs
 ```
 
