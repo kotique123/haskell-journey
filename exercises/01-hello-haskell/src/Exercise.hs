@@ -14,6 +14,7 @@ double num = num * 2
 circleArea :: Double -> Double
 circleArea radius = pi * radius^2
 -- BMI = weight (kg) / height^2 (m^2)
+-- most idiomatic and readable approach
 bmi :: Double -> Double -> String
 bmi weight height
   | bmiValue < 18.5 = "Underweight"
