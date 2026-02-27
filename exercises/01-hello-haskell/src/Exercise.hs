@@ -6,13 +6,17 @@ module Exercise
   ) where
 
 greet :: String -> String
-greet = undefined
+greet name = "Hello, " ++ name ++ "!"
 
 double :: Int -> Int
-double = undefined
-
+double num = num * 2
+-- Area = πr^2
 circleArea :: Double -> Double
-circleArea = undefined
-
+circleArea radius = pi * radius^2
+-- BMI = weight (kg) / height^2 (m^2)
 bmi :: Double -> Double -> String
-bmi = undefined
+bmi weight height
+  | bmiValue < 18.5 = "Underweight"
+  | bmiValue < 25.0 = "Normal"
+  | otherwise       = "Overweight"
+  where bmiValue = weight / height^2
