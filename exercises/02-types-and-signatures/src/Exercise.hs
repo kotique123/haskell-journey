@@ -7,16 +7,19 @@ module Exercise
   ) where
 
 factorial :: Integer -> Integer
-factorial = undefined
+factorial num
+  |  num <= 0 = 1
+  |  otherwise = num * factorial (num - 1)
+
 
 isEven :: Int -> Bool
-isEven = undefined
+isEven num = num `mod` 2 == 0
 
 digitToChar :: Int -> Char
-digitToChar = undefined
+digitToChar digit = toEnum (fromEnum '0' + digit) :: Char
 
 charToDigit :: Char -> Int
-charToDigit = undefined
+charToDigit digit = fromEnum digit - fromEnum '0'
 
 initials :: String -> String -> String
-initials = undefined
+initials firstName lastName = [head firstName, '.' , head lastName, '.']
