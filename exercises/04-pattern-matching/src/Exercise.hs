@@ -9,22 +9,35 @@ module Exercise
   ) where
 
 describeList :: [a] -> String
-describeList = undefined
+describeList [] = "empty"
+describeList [_] = "singleton"
+describeList (x:xs) = "longer list"
+
 
 fst3 :: (a, b, c) -> a
-fst3 = undefined
+fst3 (a,_,_) = a 
 
 snd3 :: (a, b, c) -> b
-snd3 = undefined
+snd3 (_,b,_) = b
 
 thd3 :: (a, b, c) -> c
-thd3 = undefined
+thd3 (_,_,c) = c
 
 fibonacci :: Int -> Int
-fibonacci = undefined
+fibonacci num = case num of
+  0 -> 0
+  1 -> 1
+  num -> num + fibonacci(num - 1)
+
 
 describeNumber :: Int -> String
-describeNumber = undefined
+describeNumber num = case num of
+  0 -> "zero"
+  1 -> "one"
+  2 -> "two"
+  _ | num >= 3 && num <= 9 -> "small"
+    | otherwise -> "large"
 
 safeHead :: [a] -> Maybe a
-safeHead = undefined
+safeHead [] = Nothing
+safeHead (x:_) = Just x
