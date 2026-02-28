@@ -7,16 +7,14 @@ module Exercise
   ) where
 
 hypotenuse :: Double -> Double -> Double
-hypotenuse = undefined
+hypotenuse a b = sqrt(a * a + b * b)
 
 celsiusToFahrenheit :: Double -> Double
-celsiusToFahrenheit = undefined
-
+celsiusToFahrenheit c = c * 9/5 + 32
 fahrenheitToCelsius :: Double -> Double
-fahrenheitToCelsius = undefined
+fahrenheitToCelsius f = (f - 32) * 5/9
 
 applyTwice :: (a -> a) -> a -> a
-applyTwice = undefined
-
+applyTwice f x = f $ f x 
 compose3 :: (c -> d) -> (b -> c) -> (a -> b) -> a -> d
-compose3 = undefined
+compose3 f g h x = f $ g $ h x
