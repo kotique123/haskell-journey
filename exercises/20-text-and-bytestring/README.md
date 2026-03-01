@@ -94,23 +94,23 @@ T.uncons "hello"                    -- Just ('h', "ello")
 
 ## Practice Assignments
 
-### 1. countWords
+### Assignment 1: countWords
 
 - `countWords :: T.Text -> Int` — return the number of whitespace-separated words; empty input gives 0.
 
-### 2. titleCase
+### Assignment 2: titleCase
 
 - `titleCase :: T.Text -> T.Text` — capitalise the first character of every word, leaving the rest unchanged.
 
-### 3. isPalindrome
+### Assignment 3: isPalindrome
 
 - `isPalindrome :: T.Text -> Bool` — return `True` when the text reads the same forwards and backwards, ignoring spaces and letter case.
 
-### 4. csvToRows
+### Assignment 4: csvToRows
 
 - `csvToRows :: T.Text -> [[T.Text]]` — split the input on newlines to get rows, then split each row on commas to get fields.
 
-### 5. textToBytes / bytesToText
+### Assignment 5: textToBytes / bytesToText
 
 - `textToBytes :: T.Text -> BS.ByteString` — UTF-8 encode the Text.
 - `bytesToText :: BS.ByteString -> Maybe T.Text` — safely decode UTF-8; return `Nothing` for invalid byte sequences.

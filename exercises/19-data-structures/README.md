@@ -94,22 +94,22 @@ topN n m = take n $ sortBy (comparing (Down . snd)) (Map.toList m)
 
 ## Practice Assignments
 
-### 1. wordCount
+### Assignment 1: wordCount
 
 - `wordCount :: String -> Map.Map String Int` — split the string on whitespace and count occurrences of each word.
 
-### 2. invertMap
+### Assignment 2: invertMap
 
 - `invertMap :: (Ord v) => Map.Map String v -> Map.Map v [String]` — produce a map from each value to the sorted list of keys that mapped to it.
 
-### 3. uniqueWords
+### Assignment 3: uniqueWords
 
 - `uniqueWords :: String -> Set.Set String` — return the set of distinct words in the string.
 
-### 4. commonElements
+### Assignment 4: commonElements
 
 - `commonElements :: Ord a => [a] -> [a] -> [a]` — return the elements present in both input lists.  Use `Set.intersection` internally; the result order does not matter.
 
-### 5. topN
+### Assignment 5: topN
 
 - `topN :: Int -> Map.Map String Int -> [(String, Int)]` — return the top `n` entries sorted by value descending.  If the map has fewer than `n` entries, return all of them.

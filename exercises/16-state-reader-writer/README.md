@@ -89,18 +89,18 @@ runStack s m = swap (runState m s)
 
 ## Practice Assignments
 
-### 1. stackPush / stackPop
+### Assignment 1: stackPush / stackPop
 
 Implement a functional stack using `State [a]`.
 
 - `stackPush :: a -> State [a] ()` — prepend to the list (O(1) head = top).
 - `stackPop :: State [a] (Maybe a)` — remove and return the top element; return `Nothing` on an empty stack *without* modifying state.
 
-### 2. stackSize
+### Assignment 2: stackSize
 
 - `stackSize :: State [a] Int` — return the number of elements currently on the stack without changing it.
 
-### 3. getRetryMessage
+### Assignment 3: getRetryMessage
 
 Given `data Config = Config { maxRetries :: Int, timeout :: Int }`, implement:
 
@@ -108,7 +108,7 @@ Given `data Config = Config { maxRetries :: Int, timeout :: Int }`, implement:
 
 It must produce exactly `"Will retry N times with timeout T"` where N and T come from the environment.
 
-### 4. logComputation
+### Assignment 4: logComputation
 
 - `logComputation :: Int -> Writer [String] Int`
 

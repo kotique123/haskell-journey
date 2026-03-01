@@ -85,22 +85,22 @@ primes = sieve [2..]
 
 ## Practice Assignments
 
-### 1. naturals
+### Assignment 1: naturals
 
 - `naturals :: [Integer]` — the infinite list `[1, 2, 3, …]`.
 
-### 2. fibs
+### Assignment 2: fibs
 
 - `fibs :: [Integer]` — the infinite Fibonacci sequence starting `[0, 1, 1, 2, 3, 5, …]`.  Use the efficient `zipWith` co-recursive definition.
 
-### 3. primes
+### Assignment 3: primes
 
 - `primes :: [Integer]` — infinite list of primes produced by a lazy Sieve of Eratosthenes.
 
-### 4: strictSum
+### Assignment 4: strictSum
 
 - `strictSum :: [Int] -> Int` — sum the list using `foldl'` so that the accumulator is forced at each step, avoiding a space leak.
 
-### 5: collatz
+### Assignment 5: collatz
 
 - `collatz :: Integer -> [Integer]` — the Collatz sequence from `n` to `1` inclusive.  Use `Data.List.unfoldr`.  The rule: if `n` is even, next is `n/2`; if odd, next is `3n+1`; stop after emitting `1`.

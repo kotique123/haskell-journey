@@ -86,21 +86,21 @@ The order of transformers in a stack determines semantics.  `ExceptT e (State s)
 
 ## Practice Assignments
 
-### 1. increment / runApp
+### Assignment 1: increment / runApp
 
 - `type AppM a = ExceptT String (State Int) a`
 - `increment :: AppM ()` — increment the integer counter in the State layer.
 - `runApp :: AppM a -> Int -> (Either String a, Int)` — unwrap the full stack starting from an initial counter value.
 
-### 2. guardPositive
+### Assignment 2: guardPositive
 
 - `guardPositive :: Int -> AppM Int` — if the argument is ≤ 0, throw `"non-positive"`; otherwise return it unchanged.  Verify that state changes made *before* a call to `guardPositive` are preserved even when the guard fires.
 
-### 3. greetUser
+### Assignment 3: greetUser
 
 - `type ConfigM a = ReaderT String IO a`
 - `greetUser :: String -> ConfigM String` — read the prefix string from the Reader environment and return `"<prefix> <name>"`.
 
-### 4. safeReadFile
+### Assignment 4: safeReadFile
 
 - `safeReadFile :: FilePath -> ExceptT String IO String` — attempt to read a file; convert any `IOException` into a `Left String`.  A missing path must produce `Left`, not an uncaught exception.
