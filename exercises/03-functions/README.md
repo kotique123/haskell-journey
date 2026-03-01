@@ -127,4 +127,4 @@ Write `applyTwice :: (a -> a) -> a -> a` that applies a function to a value, the
 
 ### Assignment 5: compose3
 
-Write `compose3 :: (b -> c) -> (a -> b) -> a -> c` that composes two functions — implement it **without** using the `(.)` operator. Think about what `(f . g) x` expands to.
+Write `compose3 :: (c -> d) -> (b -> c) -> (a -> b) -> a -> d` that composes three functions — implement it **without** using the `(.)` operator. Think about what `(f . g . h) x` expands to.

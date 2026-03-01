@@ -8,10 +8,7 @@ module Exercise
   , applyToBoth
   , showWithProxy
   , sizeOf
-  , runST'
   ) where
-
-import Control.Monad.ST (ST, runST)
 
 -- | Accept a *polymorphic* function (one that works for any Num type)
 -- and apply it to an Int.
@@ -34,8 +31,3 @@ showWithProxy = undefined
 -- The type variable @a@ from the signature must be in scope inside.
 sizeOf :: forall a. [a] -> (Int, [a])
 sizeOf = undefined
-
--- | Wrap runST from Control.Monad.ST.
--- The (forall s. ST s a) type prevents the mutable state from escaping.
-runST' :: (forall s. ST s a) -> a
-runST' _ = undefined

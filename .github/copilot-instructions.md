@@ -12,7 +12,8 @@ exercises/NN-slug/
 ├── stack.yaml             # Stack config — resolver: lts-22.39 (do not change)
 ├── package.yaml           # hpack config
 ├── src/
-│   └── Exercise.hs        # Skeleton — learner fills in undefined stubs
+│   ├── Exercise.hs        # Skeleton — learner fills in undefined stubs
+│   └── Solution.hs        # Reference implementation (don't peek!)
 └── test/
     ├── Spec.hs            # {-# OPTIONS_GHC -F -pgmF hspec-discover #-}
     └── ExerciseSpec.hs    # Pre-written Hspec tests — DO NOT MODIFY
@@ -57,7 +58,7 @@ fourmolu --mode inplace src/
 ## Creating a New Exercise
 
 1. `stack.yaml`: `resolver: lts-22.39`, `packages: [.]`
-2. `package.yaml`: name `exercise-NN-slug`, expose `Exercise` module, test deps: `hspec >= 2.11`, `hspec-discover`, `QuickCheck`
+2. `package.yaml`: name `exNN-slug`, expose `Exercise` module, test deps: `hspec >= 2.11`, `hspec-discover`, `QuickCheck`
 3. `test/Spec.hs`: exactly `{-# OPTIONS_GHC -F -pgmF hspec-discover #-}`
 4. `src/Exercise.hs`: type signatures + `= undefined` bodies with `-- | description` Haddock
 5. `test/ExerciseSpec.hs`: `describe "Assignment N: <name>"` blocks; must compile against the skeleton
