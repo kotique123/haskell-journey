@@ -1,0 +1,36 @@
+name: ex29-type-level-programming
+version: 0.1.0.0
+
+library:
+  source-dirs: src
+  exposed-modules: Exercise
+  default-extensions:
+    - DataKinds
+    - KindSignatures
+    - TypeOperators
+    - PolyKinds
+    - GADTs
+    - ScopedTypeVariables
+    - TypeApplications
+    - ConstraintKinds
+    - AllowAmbiguousTypes
+    - ExistentialQuantification
+  dependencies:
+    - base >= 4.17 && < 5
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    default-extensions:
+      - DataKinds
+      - TypeOperators
+      - ScopedTypeVariables
+      - TypeApplications
+    dependencies:
+      - base >= 4.17 && < 5
+      - ex29-type-level-programming
+      - hspec >= 2.11
+      - hspec-discover
+    build-tools:
+      - hspec-discover:hspec-discover

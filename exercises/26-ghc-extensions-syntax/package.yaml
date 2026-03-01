@@ -1,0 +1,31 @@
+name: ex26-ghc-extensions-syntax
+version: 0.1.0.0
+
+library:
+  source-dirs: src
+  exposed-modules: Exercise
+  default-extensions:
+    - LambdaCase
+    - TupleSections
+    - MultiWayIf
+    - BlockArguments
+    - NamedFieldPuns
+    - RecordWildCards
+  dependencies:
+    - base >= 4.17 && < 5
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    default-extensions:
+      - LambdaCase
+      - TupleSections
+    dependencies:
+      - base >= 4.17 && < 5
+      - ex26-ghc-extensions-syntax
+      - hspec >= 2.11
+      - hspec-discover
+      - QuickCheck
+    build-tools:
+      - hspec-discover:hspec-discover

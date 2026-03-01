@@ -1,0 +1,34 @@
+name: ex30-profiling-optimization
+version: 0.1.0.0
+
+library:
+  source-dirs: src
+  exposed-modules: Exercise
+  default-extensions:
+    - BangPatterns
+  dependencies:
+    - base >= 4.17 && < 5
+    - deepseq >= 1.4
+
+executables:
+  bench-exercise:
+    main: Bench.hs
+    source-dirs: bench
+    dependencies:
+      - base >= 4.17 && < 5
+      - ex30-profiling-optimization
+      - criterion >= 1.6
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - base >= 4.17 && < 5
+      - ex30-profiling-optimization
+      - hspec >= 2.11
+      - hspec-discover
+      - QuickCheck
+      - deepseq >= 1.4
+    build-tools:
+      - hspec-discover:hspec-discover

@@ -1,0 +1,30 @@
+name: ex27-ghc-extensions-types
+version: 0.1.0.0
+
+library:
+  source-dirs: src
+  exposed-modules: Exercise
+  default-extensions:
+    - RankNTypes
+    - ScopedTypeVariables
+    - TypeApplications
+    - AllowAmbiguousTypes
+  dependencies:
+    - base >= 4.17 && < 5
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    default-extensions:
+      - RankNTypes
+      - ScopedTypeVariables
+      - TypeApplications
+    dependencies:
+      - base >= 4.17 && < 5
+      - ex27-ghc-extensions-types
+      - hspec >= 2.11
+      - hspec-discover
+      - QuickCheck
+    build-tools:
+      - hspec-discover:hspec-discover
