@@ -7,7 +7,8 @@ module Exercise
   ) where
 
 myMap :: (a -> b) -> [a] -> [b]
-myMap = undefined
+myMap _ []     = []
+myMap f (x:xs) = f x : myMap f xs
 
 myFilter :: (a -> Bool) -> [a] -> [a]
 myFilter = undefined
